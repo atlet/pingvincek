@@ -1,0 +1,257 @@
+body
+{
+    background-color: #F0F5FB;
+}
+
+h1
+{
+    font-size: 25px;
+    color: #3D68AD;
+    font-weight:bold;
+    -x-system-font:none;
+    font-size-adjust:none;
+    font-stretch:normal;
+    font-style:normal;
+    font-variant:normal;
+    line-height:normal;
+    margin: 20px 20px 0;
+    border-bottom:2px solid #ECF3F5;
+    padding-bottom:5px;
+}
+
+h3
+{
+    border-bottom: 2px solid #ECF3F5;
+    font-weight:bold;
+    color: #3D68AD;
+    margin: 20px 20px 0;
+    padding-bottom: 5px;
+}
+
+p
+{
+    -x-system-font:none;
+    font-size-adjust:none;
+    font-stretch:normal;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    line-height:normal;
+    margin:8px 20px 8px 20px;
+}
+
+table{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.visina
+{
+    height: 20px;
+}
+
+.obroba
+{
+    border:1px solid #D8E2E8;
+    background-color: white;
+    margin-top: 5px;
+}
+
+.obroba-prazno
+{
+    background-image: url('../img/back-x.png');
+    background-repeat: repeat-y;
+    margin-top: 5px;
+    border-top: 1px solid #D8E2E8;
+    border-bottom: 1px solid #D8E2E8;
+
+}
+
+.naslov
+{
+    margin:10px 20px 10px 20px;
+    font-size: 25px;
+    color: #3D68AD;
+    font-weight:bold;
+    -x-system-font:none;
+    font-size-adjust:none;
+    font-stretch:normal;
+    font-style:normal;
+    font-variant:normal;
+}
+
+.naslov h1
+{
+    border-bottom: none;
+}
+
+.landingpage h2
+{
+    border-bottom: 2px solid #ECF3F5;
+    font-weight:bold;
+    color: #3D68AD;
+    margin: 20px 20px 0;
+    padding-bottom: 5px;
+}
+
+.error-message
+{
+    color: red;
+    margin-left: 3px;
+}
+
+tbody tr:nth-child(2n) td, tbody tr.even td
+{
+    background-color: #F0F5FB;
+    border-bottom:1px solid #D8E2E8;
+}
+
+tbody tr td{
+    border-bottom:1px solid #D8E2E8;
+}
+
+tbody tr th{
+    border-bottom:2px solid #3D68AD;
+}
+
+.formStyle label
+{
+    width: 100px;
+    display: inline-block;
+    float: left;
+    padding-top: 10px;
+}
+
+.checkbox
+{
+    margin-left: 100px;
+}
+
+.checkbox label
+{
+    width: 300px;
+    float: none;
+}
+
+fieldset
+{
+    border: none;
+    border-top:1px solid #D8E2E8;
+}
+
+legend
+{
+    border:1px solid #D8E2E8;
+    background-color: white;
+    padding: 2px;
+    color: #3D68AD;
+}
+
+.test
+{
+    border:1px solid #D8E2E8;
+    margin-bottom: 20px;    
+}
+
+.slika
+{
+    text-align: center;
+}
+
+.slikaProfil
+{
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imeProfil
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    margin: 0;
+    text-align: center;
+}
+
+#profil
+{
+    width: 150px;
+    display: inline-block;
+}
+
+dl {
+    line-height: 1.75em;
+    width: 100%;
+    margin:8px 20px 8px 20px;
+}
+
+dt {
+    font-weight: bold;
+    padding-left: 0px;
+    vertical-align: top;
+}
+dd {
+    margin-left: 8em;
+    margin-top: -1.75em;
+    vertical-align: top;
+}
+
+.profili tbody tr td
+{
+    background-color: #fff;
+}
+
+.opozorilo
+{
+    -x-system-font:none;
+    background-color:#FFFFCC;
+    border:1px solid #FFDD66;
+    font-size-adjust:none;
+    font-stretch:normal;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    line-height:150%;
+    margin:8px 20px 20px;
+    padding:8px;
+}
+
+td.altrow
+{
+    background: #F0F5FB;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+}
+
+p.pisava
+{
+    font-size: 1.5em; 
+    line-height: 1.467em;
+}
+
+.tabelaProfili tbody tr td {
+    border-bottom: 0px solid #D8E2E8;
+    border-bottom-width: 0px;
+    border-bottom-style: solid;
+    border-bottom-color: #D8E2E8;
+}
+
+.tabelaProfili tbody tr:nth-child(2n) td, .tabelaProfili tbody tr.even td {
+    background-color: #FFFFFF;
+    border-bottom: 0px solid #D8E2E8;
+    border-bottom-width: 0px;
+    border-bottom-style: solid;
+    border-bottom-color: #D8E2E8;
+}
+
+#support
+{
+    position: fixed;
+    left:0px;
+    top:150px;
+}

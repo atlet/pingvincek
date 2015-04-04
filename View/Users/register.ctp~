@@ -1,0 +1,72 @@
+<?php
+echo $this->Html->meta(
+        'description', 'V kolikor želite pričeti spoznavati nove osebe, se morate prijaviti na strani. Ne skrbite, vašega elektronskega naslova ne bomo zlorabili.'
+);
+?> 
+
+<div class="span-19">
+    <h1>Podatki za prijavo</h1>
+    <p>Izpolnite spodnja polja in pričnite s spoznavanjem novih prijateljev!</p>
+	<?php
+	$this->Html->script('regions.js', array('inline' => FALSE));
+	echo $this->Form->create('User', array('class' => 'formStyleR', 'action' => 'register'));
+	echo "<p>";
+	echo $this->Form->input('User.username', array('label' => 'E-mail:', 'div' => false, 'between' => '<br>', 'error' => false, 'class' => 'text'));
+	echo $this->Form->error('User.username', null, array('wrap' => 'em', 'class' => 'error-message'));
+	echo "<br>";
+	echo '<span style="font-style: italic;">Vaš e-mail naslov ne bo nikoli objavljen! Potrebujemo ga, da vam pošljemo geslo za prijavo, ter vas obveščamo o novih zasebnih sporočilih.</span>';
+	echo "<br>";
+	echo "<br>";
+	echo $this->Form->input('User.nickName', array('label' => 'Vzdevek:', 'div' => false, 'between' => '<br>', 'error' => false, 'class' => 'text'));
+	echo $this->Form->error('User.nickName', null, array('wrap' => 'em', 'class' => 'error-message'));
+	echo "<br>";
+	echo '<span style="font-style: italic;">Izberite vzdevek, s katerim se želite predstavljati ostalim članom strani.</span>';
+	echo "<br>";
+	echo "<br>";
+	echo $this->Form->input('User.gender_id', array('label' => 'Spol:', 'empty' => '', 'div' => false, 'between' => '<br>', 'error' => false, 'class' => 'text'));
+	echo $this->Form->error('User.gender_id', null, array('wrap' => 'em', 'class' => 'error-message'));
+	echo "<br>";
+	echo $this->Form->input('User.birthdate', array('label' => 'Rojstni dan:', 'div' => false, 'between' => '<br>', 'error' => false, 'minYear' => '1910', 'dateFormat' => 'DMY', 'maxYear' => date("Y"), 'class' => 'text'));
+	echo $this->Form->error('User.birthdate', null, array('wrap' => 'em', 'class' => 'error-message'));
+	echo "<br>";
+	echo $this->Form->input('izberiMesto', array('id' => 'IzberiMesto', 'type' => 'text', 'label' => 'Mesto/kraj:', 'div' => false, 'between' => '<br>', 'error' => false, 'class' => 'text'));
+	echo $this->Form->hidden('User.city_id');
+	echo $this->Form->error('User.city_id', null, array('wrap' => 'em', 'class' => 'error-message'));
+	echo "<br>";
+	echo '<span style="font-style: italic;">Vpišite prve tri črke mesta/kraja iz katerega prihajate, ter izberite pravilen zadetek iz seznama, ki se bo pojavil.</span>';
+	echo "<br>";
+	echo "<br>";
+	echo $this->Form->button('Pridruži se', array('type' => 'submit'));
+	echo $this->Form->button('Počisti polja', array('type' => 'reset'));
+	echo $this->Form->end();
+	echo "</p>";
+	?>
+</div>
+
+<style>
+    .ui-autocomplete-loading { background: white url('img/ui-anim_basic_16x16.gif') right center no-repeat; }
+</style>
+
+<script>
+    $(document).ready(function()
+    {
+        $( "#IzberiMesto" ).autocomplete(
+        {
+            source: "<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'listcities')); ?>",
+            minLength: 3,
+            autoFocus: true,
+            focus: function(event, ui) 
+            {
+                $("#IzberiMesto").val(ui.item.label);
+                $("#UserCityId").val(ui.item.value);
+                return false;
+            },
+            select: function(event, ui) 
+            {
+                $("#UserCityId").val(ui.item.value);
+                this.value = ui.item.label;
+                return false;
+            }
+        });
+    });
+</script>
